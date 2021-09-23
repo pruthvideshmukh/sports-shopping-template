@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Online sports equipment shopping</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">e-Sportz</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Inquire through whatsapp
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Contact to Manager 1</a>
+              <a class="dropdown-item" href="#">Contact to Manager 2 </a>
+              <a class="dropdown-item" href="#">Contact to Manager 3 </a>
+              <a class="dropdown-item" href="#">Contact to Manager 4 </a>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div class="container my-1">
+            <div class="row">
+              <div class="col-lg-6 d-flex justify-content-start justify-content-lg-end">
+                <button class="btn btn-outline-danger mx-1" type="button" data-bs-toggle="modal"
+                  data-bs-target="#loginModal">Log In</button>
+                <button class="btn btn-outline-danger mx-1" type="button" data-bs-toggle="modal"
+                  data-bs-target="#signupModal">Sign Up</button>
+              </div>
+              <div class="col-lg-6 d-flex justify-content-start justify-content-lg-end">
+                <div class="row my-2 my-lg-0">
+                  <div class="col-8">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  </div>
+                  <div class="col-4">
+                    <button class="btn btn-outline-danger" type="submit">Search</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Log In to your account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Save Password</label>
+            </div>
+            <button type="submit" class="btn btn-info">Log In</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create a new account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Username</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-info">Sign Up</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators d-none d-md-flex">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="slider3rd.jfif" class="d-block w-100" alt="slider1">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Welcome to e-sportz</h1>
+          <h4>One place where you can order all sports stuff.</h4>
+          <button class="btn btn-danger"><a href="index.html" class="text-white text-decoration-none">Today's Deals</a></button>
+          <button class="btn btn-primary"><a href="index.html" class="text-white text-decoration-none">Upcoming Offers</a></button>
+          <button class="btn btn-success"><a href="index.html" class="text-white text-decoration-none">New Releases</a></button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="slider2nd.jfif" class="d-block w-100" alt="slider2">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Welcome to e-sportz</h1>
+          <h4>One place where you can order all sports stuff.</h4>
+          <button class="btn btn-danger"><a href="index.html" class="text-white text-decoration-none">Today's Deals</a></button>
+          <button class="btn btn-primary"><a href="index.html" class="text-white text-decoration-none">Upcoming Offers</a></button>
+          <button class="btn btn-success"><a href="index.html" class="text-white text-decoration-none">New Releases</a></button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="slider1st.jfif" class="d-block w-100" alt="slider3">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Welcome to e-sportz</h1>
+          <h4>One place where you can order all sports stuff.</h4>
+          <button class="btn btn-danger"><a href="index.html" class="text-white text-decoration-none">Today's Deals</a></button>
+          <button class="btn btn-primary"><a href="index.html" class="text-white text-decoration-none">Upcoming Offers</a></button>
+          <button class="btn btn-success"><a href="index.html" class="text-white text-decoration-none">New Releases</a></button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div class="container">
+
+
+    <div class="container my-4 border">
+      <div class="row">
+        <div class="container d-flex justify-content-between my-2">
+          <h2>Cricket</h2>
+          <button class="btn btn-primary">View All</button>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="cricket5.jpg" class="figure-img img-fluid" alt="Bat" style="width:7rem;">
+                      <h6 class="text-center">Bat</h6>
+                      <p class="text-center text-success">&#8377; 1800 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="cricket4.png" class="figure-img img-fluid" alt="helmet" style="width:7rem;">
+                      <h6 class="text-center">Helmet</h6>
+                      <p class="text-center text-success">&#8377; 2200 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="cricket3.webp" class="figure-img img-fluid" alt="stumps" style="width:7rem;">
+                      <h6 class="text-center">stumps</h6>
+                      <p class="text-center text-success">&#8377; 360 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="cricket1.jpg" class="figure-img img-fluid" alt="leather ball box"
+                        style="width:7rem;">
+                      <h6 class="text-center">Leather Ball Box</h6>
+                      <p class="text-center text-success">&#8377; 2460 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="tennisballbox.jpg" class="figure-img img-fluid" alt="Bat" style="width:7rem;">
+                      <h6 class="text-center">Tennis Ball Box</h6>
+                      <p class="text-center text-success">&#8377; 640 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="chestgaurd.jpg" class="figure-img img-fluid" alt="Chest Pad" style="width:7rem;">
+                      <h6 class="text-center">Chest Pad</h6>
+                      <p class="text-center text-success">&#8377; 680 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="cricketglobs.jpg" class="figure-img img-fluid" alt="Globs" style="width:7rem;">
+                      <h6 class="text-center">Globs</h6>
+                      <p class="text-center text-success">&#8377; 250 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="cricketpads.png" class="figure-img img-fluid" alt="Cricket Pads"
+                        style="width:7rem;">
+                      <h6 class="text-center">Leg Pads</h6>
+                      <p class="text-center text-success">&#8377; 1400 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container my-4 border">
+      <div class="row">
+        <div class="container d-flex justify-content-between my-2">
+          <h2>Hockey</h2>
+          <button class="btn btn-primary">View All</button>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="hockeystick.jpeg" class="figure-img img-fluid" alt="hockey stick"
+                        style="width:7rem;">
+                      <h6 class="text-center">Hockey Stick</h6>
+                      <p class="text-center text-success">&#8377; 400 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="hockeyball.jpg" class="figure-img img-fluid" alt="Ball" style="width:7rem;">
+                      <h6 class="text-center">Ball</h6>
+                      <p class="text-center text-success">&#8377; 170 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="hockeyhelmet.jpg" class="figure-img img-fluid" alt="helmet" style="width:7rem;">
+                      <h6 class="text-center">Helmet</h6>
+                      <p class="text-center text-success">&#8377; 600 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="bodyarmourgaurd.jpg" class="figure-img img-fluid" alt="Body gaurd"
+                        style="width:7rem;">
+                      <h6 class="text-center">Body Armour Gaurd</h6>
+                      <p class="text-center text-success">&#8377; 1500 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="leggauard.png" class="figure-img img-fluid" alt="leg gaurd" style="width:7rem;">
+                      <h6 class="text-center">Leg Gaurd</h6>
+                      <p class="text-center text-success">&#8377; 750 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="mouthgaurd.jfif" class="figure-img img-fluid" alt="mouthgaurd" style="width:7rem;">
+                      <h6 class="text-center">Mouth Gaurd</h6>
+                      <p class="text-center text-success">&#8377; 150 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="throatprotector.png" class="figure-img img-fluid" alt="throatprotector"
+                        style="width:7rem;">
+                      <h6 class="text-center">Throat Protector</h6>
+                      <p class="text-center text-success">&#8377; 350 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="stickbag.jfif" class="figure-img img-fluid" alt="bag" style="width:7rem;">
+                      <h6 class="text-center">Bag</h6>
+                      <p class="text-center text-success">&#8377; 280 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container my-4 border">
+      <div class="row">
+        <div class="container d-flex justify-content-between my-2">
+          <h2>Football</h2>
+          <button class="btn btn-primary">View All</button>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="footballball.jfif" class="figure-img img-fluid" alt="ball" style="width:7rem;">
+                      <h6 class="text-center">Football</h6>
+                      <p class="text-center text-success">&#8377; 1200 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="footballhelmet.jpg" class="figure-img img-fluid" alt="helmet" style="width:7rem;">
+                      <h6 class="text-center">Helmet</h6>
+                      <p class="text-center text-success">&#8377; 600 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="footballglubs.jpg" class="figure-img img-fluid" alt="globs" style="width:7rem;">
+                      <h6 class="text-center">Globs</h6>
+                      <p class="text-center text-success">&#8377; 560 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="shoulderpads.jpg" class="figure-img img-fluid" alt="shoulderpads"
+                        style="width:7rem;">
+                      <h6 class="text-center">Shoulder Pads</h6>
+                      <p class="text-center text-success">&#8377; 1100 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="kneepads.jfif" class="figure-img img-fluid" alt="kneepads" style="width:7rem;">
+                      <h6 class="text-center">Knee Pads</h6>
+                      <p class="text-center text-success">&#8377; 350 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="shoes.jpg" class="figure-img img-fluid" alt="Shoes" style="width:7rem;">
+                      <h6 class="text-center">Shoes</h6>
+                      <p class="text-center text-success">&#8377; 1500 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="mouthprotector.jfif" class="figure-img img-fluid" alt="mouthprotector"
+                        style="width:7rem;">
+                      <h6 class="text-center">Mouth Protector</h6>
+                      <p class="text-center text-success">&#8377; 200 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="shingaurd.jpg" class="figure-img img-fluid" alt="shingaurd" style="width:7rem;">
+                      <h6 class="text-center">Shin Gaurd</h6>
+                      <p class="text-center text-success">&#8377; 400 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container my-4 border">
+      <div class="row">
+        <div class="container d-flex justify-content-between my-2">
+          <h2>Shoes</h2>
+          <button class="btn btn-primary">View All</button>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="adidasshoes.jpg" class="figure-img img-fluid" alt="adidasshoes" style="width:7rem;">
+                      <h6 class="text-center">Adidas Shoes</h6>
+                      <p class="text-center text-success">&#8377; 1200 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="lancershoes.jfif" class="figure-img img-fluid" alt="lancershoes"
+                        style="width:7rem;">
+                      <h6 class="text-center">Lancer Shoes</h6>
+                      <p class="text-center text-success">&#8377; 800 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="pumashoes.jpg" class="figure-img img-fluid" alt="pumashoes" style="width:7rem;">
+                      <h6 class="text-center">Puma Shoes</h6>
+                      <p class="text-center text-success">&#8377; 900 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="sparxshoes.jpg" class="figure-img img-fluid" alt="sparxshoes" style="width:7rem;">
+                      <h6 class="text-center">Sparx Shoes</h6>
+                      <p class="text-center text-success">&#8377; 1800 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="nikeshoes.jpg" class="figure-img img-fluid" alt="nikeshoes" style="width:7rem;">
+                      <h6 class="text-center">Nike Shoes</h6>
+                      <p class="text-center text-success">&#8377; 900 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="batashoes.jfif" class="figure-img img-fluid" alt="batashoes" style="width:7rem;">
+                      <h6 class="text-center">Bata Shoes</h6>
+                      <p class="text-center text-success">&#8377; 2000 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="paragonshoes.jpg" class="figure-img img-fluid" alt="paragonshoes"
+                        style="width:7rem;">
+                      <h6 class="text-center">Paragon Shoes</h6>
+                      <p class="text-center text-success">&#8377; 1000 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="rebookshoes.jfif" class="figure-img img-fluid" alt="rebookshoes"
+                        style="width:7rem;">
+                      <h6 class="text-center">Rebook Shoes</h6>
+                      <p class="text-center text-success">&#8377; 1500 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container my-4 border">
+      <div class="row">
+        <div class="container d-flex justify-content-between my-2">
+          <h2>IPL Jersey</h2>
+          <button class="btn btn-primary">View All</button>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="mi.jpeg" class="figure-img img-fluid" alt="mi" style="width:7rem;">
+                      <h6 class="text-center">Mumbai Indians Jersey</h6>
+                      <p class="text-center text-success">&#8377; 250 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="pbks.jfif" class="figure-img img-fluid" alt="pbks" style="width:7rem;">
+                      <h6 class="text-center">Punjab Kings Jersey</h6>
+                      <p class="text-center text-success">&#8377; 250 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="rcb.jpeg" class="figure-img img-fluid" alt="rcb" style="width:7rem;">
+                      <h6 class="text-center">Royal Challengers Bangalore Jersey</h6>
+                      <p class="text-center text-success">&#8377; 250 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="dc.jpeg" class="figure-img img-fluid" alt="dc" style="width:7rem;">
+                      <h6 class="text-center">Delhi Capitals Jersey</h6>
+                      <p class="text-center text-success">&#8377; 250 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="csk.jpeg" class="figure-img img-fluid" alt="csk" style="width:7rem;">
+                      <h6 class="text-center">Chennai Super Kings Jersey</h6>
+                      <p class="text-center text-success">&#8377; 250 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="srh.jpeg" class="figure-img img-fluid" alt="srh" style="width:7rem;">
+                      <h6 class="text-center">Sunrisers Hyderabad Jersey</h6>
+                      <p class="text-center text-success">&#8377; 250 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="rr.png" class="figure-img img-fluid" alt="rr" style="width:7rem;">
+                      <h6 class="text-center">Rajasthan Royals Jersey</h6>
+                      <p class="text-center text-success">&#8377; 250 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center">
+                    <figure class="figure border p-1">
+                      <img src="kkr.jpeg" class="figure-img img-fluid" alt="kkr" style="width:7rem;">
+                      <h6 class="text-center">Kolkata Knight Riders Jersey</h6>
+                      <p class="text-center text-success">&#8377; 250 Only</p>
+                      <div class="d-flex justify-content-center">
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer class="page-footer font-small bg-dark">
+    <div class="footer-copyright text-center bg-dark text-white py-2">© 2021 Copyright All rights reserved: e-Sportz.com
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
